@@ -12,13 +12,13 @@ public class OptionalCheatSheet {
         // Creation
         Optional<String> empty = Optional.empty();
         Optional<String> a = Optional.of("hello");
-        //Optional<String> b = Optional.of(null); // .of() requires non-null value
+        //Optional<String> b = Optional.of(null); // ERROR: .of() requires non-null value
         Optional<String> c = Optional.ofNullable("hello");
         Optional<String> d = Optional.ofNullable(null);
 
         // basics
-        a.isPresent();
-        String s1 = a.get(); // If empty null, get() throws NoSuchElementException
+        boolean present = a.isPresent();
+        String s1 = a.get(); // If empty, get() throws NoSuchElementException
         String s2 = a.orElse("default");
         Optional<String> r1 = a.filter(x -> x.length() > 2); // if Optional contains a value and it passes filter, return Optional of it. All other cases return an empty Optional.
 
