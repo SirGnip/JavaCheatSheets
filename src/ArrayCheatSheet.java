@@ -18,11 +18,12 @@ public class ArrayCheatSheet {
         System.out.println(odds); // prints out hash? id? pointer?
         System.out.println(Arrays.toString(odds)); // prints out items
 
-        // creation, initializatoin and literals
+        // creation, initialization and literals
         int[] b = new int[3]; // initialized to zeros (null for String)
         int[] a = {1, 3, 5}; // array literal
         int[] evens = new int[]{2, 4, 6};
         System.out.println(new int[]{2, 4, 6, 8, 10}); // pass array literal to function
+        System.out.println(new String[]{"four", "score", "and", "seven"}); // pass array literal to function
 
         // indexing and assignment
         a[0] = 42; // assign to index
